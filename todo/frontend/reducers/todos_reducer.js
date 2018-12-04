@@ -21,12 +21,15 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case RECEIVE_TODOS:
             let todohsh = {};
-            action.todos.map (todo => todohsh[todo.id] = todo );
+            action.todos.forEach(todo => todohsh[todo.id] = todo);
             return todohsh;
         case RECEIVE_TODO:
             let obj = {};
             obj[action.todo.id] = action.todo;
             return Object.assign({}, state, obj);
+            // let newState = Object.assign({}, state);
+            // newState[action.todo.id] = action.todo;
+            // return newState;
         default:
             return state;
     };
