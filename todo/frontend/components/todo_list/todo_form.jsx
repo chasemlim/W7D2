@@ -33,10 +33,12 @@ class TodoForm extends React.Component {
                     Title:
                 <input onChange={this.handleChange} name="title" type="text" value={this.state.title}/>
                 </label>
+                <br/>
                 <label>
                     Body:
-                    <textarea onChange={this.handleChange} name="body" cols="20" rows="30" value={this.state.body}></textarea>
+                    <textarea onChange={this.handleChange} name="body" cols="30" rows="3" value={this.state.body}></textarea>
                 </label>
+                <br/>
                 <input type="submit" name="" value="Submit" />
             </form>
         )
