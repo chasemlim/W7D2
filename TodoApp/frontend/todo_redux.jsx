@@ -9,10 +9,6 @@ import allTodos from './reducers/selectors'
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     const store = configureStore();
-    window.store = store;
-    window.receiveTodos = receiveTodos;
-    window.receiveTodo = receiveTodo;
-    window.allTodos = allTodos;
     ReactDOM.render(
         <Root store = { store } />,
         root
